@@ -1,0 +1,45 @@
+
+#confirmationInfo {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#confirmationTable {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+#cartTable {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #eee0a0;
+    border: 1px solid black;
+
+}
+
+#cartTable tr:nth-child(even){background-color: #d0d37a
+}
+
+
+#customerInfo {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #eee0a0;
+
+}
+
+.tableTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+

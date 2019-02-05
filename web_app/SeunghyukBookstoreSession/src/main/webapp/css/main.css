@@ -1,0 +1,32 @@
+
+
+body {
+    font: 1em normal Verdana, Tahoma, sans-serif;
+    color: black;
+    background: #fa7a84;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+main {
+
+    /* stack header-section-footer on all pages */
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+a,
+a:visited,
+input[type=submit] {
+    color: blue;
+}
+
+a:hover,
+a:active,
+input[type=submit]:hover,
+ul.buttons a:hover{
+    color: purple;
+}

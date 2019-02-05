@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SeunghyukBookstoreView.iml" filepath="$PROJECT_DIR$/.idea/modules/SeunghyukBookstoreView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SeunghyukBookstoreView_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SeunghyukBookstoreView_main.iml" group="SeunghyukBookstoreView" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SeunghyukBookstoreView_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SeunghyukBookstoreView_test.iml" group="SeunghyukBookstoreView" />
+    </modules>
+  </component>
+</project>

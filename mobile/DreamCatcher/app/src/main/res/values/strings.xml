@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DreamCatcher</string>
+    <string name="dream_title_label">MY DREAM</string>
+    <string name="dream_title_hint">Enter the title for dream</string>
+    <string name="dream_details_label">DREAM JOURNEY:</string>
+    <string name="dream_realized_label">Realized</string>
+    <string name="dream_deferred_label">Deferred</string>
+    <string name="dream_revealed">Dream Revealed</string>
+</resources>

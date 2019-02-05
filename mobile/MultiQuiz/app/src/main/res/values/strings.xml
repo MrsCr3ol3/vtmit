@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MultiQuiz</string>
+    <string name="question_aus_capital">What is the capital of Australia ?</string>
+    <string name="answer_brisbane">Brisbane</string>
+    <string name="answer_canberra">Canberra</string>
+    <string name="answer_perth">Perth</string>
+    <string name="answer_sydney">Sydney</string>
+    <string name="question_us_capital">What is the capital of United States ?</string>
+    <string name="answer_washington">Washington D. C.</string>
+    <string name="answer_newyork">New York</string>
+    <string name="answer_atl">Atlanta</string>
+    <string name="answer_dallas">Dallas</string>
+    <string name="question_korea_capital">What is the capital of South Korea ?</string>
+    <string name="answer_incheon">Incheon</string>
+    <string name="answer_daegu">Daegu</string>
+    <string name="answer_seoul">Seoul</string>
+    <string name="answer_pusan">Pusan</string>
+    <string name="hint_button">Hint</string>
+    <string name="submit_button">Submit</string>
+    <string name="title_result_title">Result</string>
+</resources>

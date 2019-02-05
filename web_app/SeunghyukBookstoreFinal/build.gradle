@@ -1,0 +1,31 @@
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile group: 'org.apache.tomcat', name: 'tomcat-catalina', version: '8.5.15'
+
+    compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.5'
+    compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.5'
+    compile group: 'mysql', name:'mysql-connector-java', version: '5.1.40'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+/*
+ * Use 'gradle war' to place the WAR file in build/libs.
+ * Use jar tvf build/libs/PROJECT.war to verify the contents of your war
+ * - this makes sure to include the Java source code in the WAR artifact
+ */
+war {
+    from('src/main/java') {
+        include '**/*.java'
+        into ('WEB-INF/classes')
+    }
+}

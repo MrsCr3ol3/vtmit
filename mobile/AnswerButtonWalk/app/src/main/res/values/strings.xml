@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AnswerButtonWalk</string>
+    <string name="question_australia_capital">What is the capital of Australia?</string>
+    <string name="answer_brisbane">Brisbane</string>
+    <string name="answer_canberra">Canberra</string>
+    <string name="answer_perth">Perth</string>
+    <string name="answer_sydney">Sydney</string>
+    <string name="disable_button_name">Disable</string>
+    <string name="reset_button_name">Reset</string>
+</resources>

@@ -1,0 +1,66 @@
+﻿C:\Users\HYUK\Documents\ece5480\p6>python3 project6.py
+58к, Куйбишева вулиця, Донецьк, Ленінський район, Донецька міська рада, До
+нецька область, 83000-83490, Україна
+
+
+58к, Куйбишева вулиця, Донецьк, Ленінський район, Донецька міська рада, До
+нецька область, 83000-83490, Україна
+
+
+Росица, Оборище, Столична, София-град, 1000, Бългaрия
+
+
+11E, Derde Oosterparkstraat, Oosterparkbuurt, Amsterdam, Oost, Amsterdam, Noord-Holland, Nederland, 1091JS, Nederland
+
+
+Малко НДК, д-р Христо Стамболски, ж.г. Южен парк, ж.к. Иван Вазов, Триадица,
+ Столична, София-град, 1463, Бългaрия
+
+
+Crossmans, Middlesex County, New Jersey, 08859, USA
+
+
+Reno County, Kansas, USA
+
+
+Aueteich, Auedamm, Südstadt, Kassel, Regierungsbezirk Kassel, Hessen, 34121, Deutschland, Europe
+
+
+浙江工业大学, 东晖路, 朝晖街道, 杭州市 Hangzhou, 浙江省, 310014, 中国
+
+
+Lacul Valea Morilor, Strada Alexandru Plămădeală, Centru, Chișinău, Municipiul Chișinău, MD2008, Moldova
+
+
+Aueteich, Auedamm, Südstadt, Kassel, Regierungsbezirk Kassel, Hessen, 34121, Deutschland, Europe
+
+
+Пречистенская набережная, Берсеневка, Москва, Центральный администрат
+ивный округ, Москва, ЦФО, 119072, РФ
+
+
+Het IJ, IJdok, Amsterdam, Centrum, Amsterdam, Noord-Holland, Nederland, 1013MM, Nederland
+
+
+Thames River Cruises, Lambeth Bridge, Vauxhall, London Borough of Lambeth, London, Greater London, England, SE1 7SG, UK
+
+
+Reno County, Kansas, USA
+
+
+Московский Кремль, Троицкая улица, Старое Ваганьково, Москва, Центральн
+ый административный округ, Москва, ЦФО, 103073, РФ
+
+
+Het IJ, IJdok, Amsterdam, Centrum, Amsterdam, Noord-Holland, Nederland, 1013MM, Nederland
+
+
+成都富力广场, 东华门街, 锦江区 (Jinjiang), 成都市 / Chengdu, 四川省, 610015, 中国
+
+
+Пречистенская набережная, Берсеневка, Москва, Центральный администрат
+ивный округ, Москва, ЦФО, 119072, РФ
+
+
+Пречистенская набережная, Берсеневка, Москва, Центральный администрат
+ивный округ, Москва, ЦФО, 119072, РФ

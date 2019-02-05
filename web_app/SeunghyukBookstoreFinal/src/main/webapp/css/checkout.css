@@ -1,0 +1,32 @@
+tr,td {
+    padding: 10px;
+}
+
+#checkOutTable {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    background-color: #d3a4a4;
+
+}
+
+tr:nth-child(even){background-color: lightgray}
+
+
+.tableLabel {
+    font-weight: bold;
+}
+
+#boldSubmitButton {
+    background-color: #5e78af; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}

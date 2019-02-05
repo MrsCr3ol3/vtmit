@@ -1,0 +1,112 @@
+
+header {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+
+
+}
+body {
+    background-image: url(../images/site/bg2.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    min-width: 20px;
+}
+
+#leftHeader {
+    display: flex;
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+
+#midHeader {
+    margin-top:60px;
+    padding-left:50px;
+    /*
+    align-self: center;
+    */
+
+
+}
+#rightHeader {
+    display: flex;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    padding-top: 150px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: flex-end;
+    flex-wrap: wrap;
+
+
+}
+
+#searchBoxandIcon {
+    display: flex;
+    flex-direction: row;
+}
+
+#cartIconandNumber {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: #a9ffa7;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #65f97b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #aaf19b
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}

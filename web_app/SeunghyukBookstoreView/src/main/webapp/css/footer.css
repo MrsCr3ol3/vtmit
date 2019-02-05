@@ -1,0 +1,16 @@
+footer {
+    color: black;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#leftFooter {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+
+}
+#rightFooter {
+    width: 200px;
+}

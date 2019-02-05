@@ -1,0 +1,33 @@
+#welcomeMessage {
+
+    margin-bottom: 20px;
+    /*
+    border-bottom: #a7dcff;
+    border-bottom-style: solid;
+    */
+
+}
+
+img {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding:1px;
+    border:5px solid #010102;
+    background-color:#ff0;
+}
+
+#bestSellingBooks {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    margin: 35px auto 20px;
+}
+
+
+img {
+    margin-right: 100px;
+    margin-left: 20px;
+    padding:1px;
+    border:5px solid #010102;
+    background-color:#ff0;
+}

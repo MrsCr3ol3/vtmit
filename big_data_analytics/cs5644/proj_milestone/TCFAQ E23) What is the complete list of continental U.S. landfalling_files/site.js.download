@@ -1,0 +1,527 @@
+String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); }
+/*
+// Function to Detect Browser
+var BrowserDetect = {
+	init: function () {
+		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+		this.version = this.searchVersion(navigator.userAgent)
+			|| this.searchVersion(navigator.appVersion)
+			|| "an unknown version";
+		this.OS = this.searchString(this.dataOS) || "an unknown OS";
+	},
+	searchString: function (data) {
+		for (var i=0;i<data.length;i++)	{
+			var dataString = data[i].string;
+			var dataProp = data[i].prop;
+			this.versionSearchString = data[i].versionSearch || data[i].identity;
+			if (dataString) {
+				if (dataString.indexOf(data[i].subString) != -1)
+					return data[i].identity;
+			}
+			else if (dataProp)
+				return data[i].identity;
+		}
+	},
+	searchVersion: function (dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index == -1) return;
+		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	},
+	dataBrowser: [
+		{
+			string: navigator.userAgent,
+			subString: "Chrome",
+			identity: "Chrome"
+		},
+		{ 	string: navigator.userAgent,
+			subString: "OmniWeb",
+			versionSearch: "OmniWeb/",
+			identity: "OmniWeb"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Apple",
+			identity: "Safari",
+			versionSearch: "Version"
+		},
+		{
+			prop: window.opera,
+			identity: "Opera",
+			versionSearch: "Version"
+		},
+		{
+			string: navigator.vendor,
+			subString: "iCab",
+			identity: "iCab"
+		},
+		{
+			string: navigator.vendor,
+			subString: "KDE",
+			identity: "Konqueror"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Firefox",
+			identity: "Firefox"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Camino",
+			identity: "Camino"
+		},
+		{		// for newer Netscapes (6+)
+			string: navigator.userAgent,
+			subString: "Netscape",
+			identity: "Netscape"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "MSIE",
+			identity: "Explorer",
+			versionSearch: "MSIE"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Gecko",
+			identity: "Mozilla",
+			versionSearch: "rv"
+		},
+		{ 		// for older Netscapes (4-)
+			string: navigator.userAgent,
+			subString: "Mozilla",
+			identity: "Netscape",
+			versionSearch: "Mozilla"
+		}
+	],
+	dataOS : [
+		{
+			string: navigator.platform,
+			subString: "Win",
+			identity: "Windows"
+		},
+		{
+			string: navigator.platform,
+			subString: "Mac",
+			identity: "Mac"
+		},
+		{
+			   string: navigator.userAgent,
+			   subString: "iPhone",
+			   identity: "iPhone/iPod"
+	    },
+		{
+			string: navigator.platform,
+			subString: "Linux",
+			identity: "Linux"
+		}
+	]
+
+};
+BrowserDetect.init();
+*/
+function autoswap() {
+	if(inc==5)
+		inc=0;
+	inc=inc+1;
+	var id='div'+inc;
+	document.getElementById('div0').style.display = "none";
+	var ele = document.getElementById(id);
+	var text = document.getElementById(id+"_text");
+	ele.style.display = "block";
+	text.innerHTML = "<b>"+id.substring(3,4)+"</b>";
+	for(var i=1;i<=5;i++) {
+		if(id=='div'+i)
+			continue;
+		else {
+			ele = document.getElementById('div'+i);
+			text = document.getElementById('div'+i+'_text');
+	    	ele.style.display = "none";
+			text.innerHTML = i;
+		}//end if
+	}//end for
+}//end autoswap
+//For HRD
+function autoswap_hrd() {
+	if(inc==5)
+		inc=0;
+	inc=inc+1;
+	var id='div'+inc;
+	var ele = document.getElementById(id);
+	ele.style.display = "block";
+	for(var i=1;i<=5;i++) {
+		if(id=='div'+i) {
+			text = document.getElementById('div'+i+'_text');
+			text.innerHTML = "<b>"+text.innerHTML+"</b>";
+			continue;
+		}
+		else {
+			ele = document.getElementById('div'+i);
+			text = document.getElementById('div'+i+'_text');
+	    	ele.style.display = "none";
+			text.innerHTML = i;
+		}//end if
+	}//end for
+}//end autoswap_hrd
+function changetopbanner(bannerurl)
+{
+	//"url(/pix/Website/topbannerwave1.jpg)"
+	document.getElementById('header').style.backgroundImage="url("+bannerurl+")";
+}
+function changetopbannerbydiv(division)
+{
+	switch(division) {
+		case "hrd":
+			document.getElementById('header').style.backgroundImage="url(/pix/Website/top_banner_hrd.gif)";
+			break;
+		case "ocd":
+			document.getElementById('header').style.backgroundImage="url(/pix/Website/top_banner_ocd.gif)";
+			break;
+		case "phod":
+			document.getElementById('header').style.backgroundImage="url(/pix/Website/top_banner_phod.gif)";
+			break;
+		default:
+			document.getElementById('header').style.backgroundImage="url(/pix/Website/top_default1.jpg)";
+			break;
+	}//end switch
+}
+function changevisibility(divID) {
+	var state = document.getElementById(divID).style.display;
+	if (state == '' || state == 'block') {
+		document.getElementById(divID).style.display = 'none';
+	} else {
+		document.getElementById(divID).style.display = '';
+	}
+}//end changevisibility
+function clearSearchBar() {
+	if(document.getElementById('query-field').value == "Search")
+		document.getElementById('query-field').value = ""
+}
+function cycletablecellcolor(tagType, tagName, thiselem, thisbgcolor, thisfontcolor, groupbgcolor, groupfontcolor) {
+	var allElements = document.getElementsByTagName(tagType);
+	for (i = 0; i < allElements.length; i++) {
+		if(tagName == allElements[i].getAttribute("name")) {
+			allElements[i].style.backgroundColor = groupbgcolor;
+			allElements[i].style.color = groupfontcolor;
+		}//end if
+	}//end for
+	thiselem.style.backgroundColor = thisbgcolor;
+	thiselem.style.color = thisfontcolor;
+}//end cycletablecellcolor
+function cyclevisibility(divName, divID) {
+	var allElements = getElementsByName_iefix("div",divName);
+	for (i = 0; i < allElements.length; i++) {
+		if(divID==allElements[i].id) {
+			allElements[i].style.display = "block";
+		}
+		else
+			allElements[i].style.display = "none";
+	}
+}
+function cyclevisibility(tagType, tagName, divID) {
+	var allElements = getElementsByName_iefix(tagType,tagName);
+	for (i = 0; i < allElements.length; i++) {
+		if(divID==allElements[i].id) {
+			allElements[i].style.display = "";
+		}
+		else
+			allElements[i].style.display = "none";
+	}
+}//end cyclevisibility
+function external_urls () {
+	elements = document.getElementsByTagName ('a');
+	for (i = 0; i < elements.length; i++) {
+		host = new RegExp ('^http:\/\/' + location.hostname.replace ('.', '\\.') + '\/', 'i');
+		if (elements[i].href.match (/^http:/) && ! elements[i].href.match (host)) {
+			elements[i].href = '/index/aoml-external-action?url=' + elements[i].href;
+			elements[i].target = '_top';
+		}
+	}
+}//end external_urls
+function exitwarn() {
+	var linkElements = document.getElementsByTagName("a");
+	for (i = 0; i < linkElements.length; i++) {
+		if(linkElements[i].href.indexOf("mailto:")<0 &&
+		   linkElements[i].href.indexOf("172.16.101.77")<0 &&
+		   linkElements[i].href.indexOf("noaa.gov")<0 &&
+		   linkElements[i].href.indexOf("noaahrd.wordpress.com")<0 &&
+		   linkElements[i].href.indexOf("javascript")<0 &&
+                   linkElements[i].href!="" &&
+		   linkElements[i].href.indexOf("coral.noaa.gov")<0) {
+			var str="You are now leaving NOAA's Atlantic Oceanographic and Meteorological Laboratory website. "+
+					"This link is provided as it may contain related information of interest to you. "+
+					"Posting of this link does not constitute an endorsement by AOML of any information, products, or services on this external website. "+ 
+					"AOML neither owns nor operates this site and is not responsible for its maintenance or data accuracy. Use this site at your own risk.";
+			linkElements[i].onclick = function() { return confirm(str); };
+		}//end if
+	}//end for
+}
+function exitwarn_page() {
+	//var linkElements = document.getElementById('tdcontent').getElementsByTagName("a");
+	var linkElements = document.getElementsByTagName("a");
+	for (i = 0; i < linkElements.length; i++) {
+		if(linkElements[i].href.indexOf("mailto:")<0 &&
+		   linkElements[i].href.indexOf("172.16.101.77")<0 &&
+		   linkElements[i].href.indexOf("noaa.gov")<0 &&
+		   linkElements[i].href.indexOf("noaahrd.wordpress.com")<0 &&
+		   linkElements[i].href.indexOf("javascript")<0 &&
+                   linkElements[i].href!="" &&
+		   linkElements[i].href.indexOf("coral.noaa.gov")<0) {
+			linkElements[i].href = "/goexit.html?url="+linkElements[i].href;
+			//alert(linkElements[i].href);
+		}//end if
+	}//end for
+}
+function fwLoadMenus() {
+  if (window.fw_menu_0) return;
+  window.fw_menu_0 = new Menu("root",156,17,"Verdana, Arial, Helvetica, sans-serif",10,"#ffffff","#000066","#000066","#ffffff");
+  	fw_menu_0.addMenuItem("Physical Oceanography","location='http://www.aoml.noaa.gov/phod'");
+  	fw_menu_0.addMenuItem("Hurricane Research","location='http://www.aoml.noaa.gov/hrd'");
+  	fw_menu_0.addMenuItem("Ocean Chemistry","location='http://www.aoml.noaa.gov/ocd'");
+   	fw_menu_0.fontWeight="bold";
+   	fw_menu_0.hideOnMouseOut=true;
+
+  	fw_menu_0.writeMenus();
+} // fwLoadMenus()
+function getElementsByName_iefix(tag, name) {
+	var elem = document.getElementsByTagName(tag);
+	var arr = new Array();
+	for(i = 0,iarr = 0; i < elem.length; i++) {
+		var att = elem[i].getAttribute("name");
+		if(att == name) {
+			arr[iarr] = elem[i];
+			iarr++;
+		}
+	}
+	return arr;
+}
+function gotoPage(aUrl) {
+	if(aUrl.length>1)
+		document.location=aUrl;
+}
+function highlight_menu_item() {
+	var anurl=document.URL;
+	if(anurl.indexOf('preview.php')>0)
+		anurl=" "+window.opener.document.getElementById("cururl").value;
+	if(anurl.indexOf('/hrd/emergingobtech')>0)
+		document.getElementById("_hrd_advancedprograms_").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/advancedprograms')>0)
+		document.getElementById("_hrd_advancedprograms_").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/themes')>0)
+		document.getElementById("_hrd_themes").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/projects')>0)
+		document.getElementById("_hrd_projects").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/people')>0)
+		document.getElementById("_hrd_people_").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/groups')>0)
+		document.getElementById("_hrd_groups").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/about_hrd')>0)
+		document.getElementById("_hrd_about_hrd").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/programs/')>0)
+		document.getElementById("_hrd_programs").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/programs_sub/')>0)
+		document.getElementById("_hrd_programs_sub").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/projects')>0)
+		document.getElementById("_hrd_programs_sub").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/HFP')>0)
+		document.getElementById("_hrd_programs_sub").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/hfp')>0)
+		document.getElementById("_hrd_programs_sub").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/Storm_pages/')>0)
+		document.getElementById("_hrd_data_sub_").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/data_sets')>0)
+		document.getElementById("_hrd_data_sub_").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/data_sub')>0)
+		document.getElementById("_hrd_data_sub_").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/weather_info')>0)
+		document.getElementById("_hrd_weather_info").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd/links')>0)
+		document.getElementById("_hrd_links.html").style.color="#ffffff";
+	else
+	if(anurl.indexOf('about_us')>0)
+		document.getElementById("_about_us").style.color="#ffffff";
+	else
+	if(anurl.indexOf('keynotes')>0)
+		document.getElementById("_about_us").style.color="#ffffff";
+	else
+	if(anurl.indexOf('research')>0)
+		document.getElementById("_research").style.color="#ffffff";
+	else
+	if(anurl.indexOf('data')>0)
+		document.getElementById("_data").style.color="#ffffff";
+	else
+	if(anurl.indexOf('publications')>0)
+		document.getElementById("_publications").style.color="#ffffff";
+	else
+	if(anurl.indexOf('outreach')>0)
+		document.getElementById("_outreach").style.color="#ffffff";
+	else
+	if(anurl.indexOf('/hrd')>0)
+		document.getElementById("_hrd_").style.color="#ffffff";
+	else
+		document.getElementById("_").style.color="#ffffff";
+}
+function keynotesYearList() {
+	//var allElements = document.getElementsByName("year");
+	var allElements = getElementsByName_iefix("div","year");
+	for (i = 0; i < allElements.length; i++) {
+		if(document.getElementById('yearselect').value==allElements[i].id) {
+			allElements[i].style.display = "block";
+		}
+		else
+			allElements[i].style.display = "none";
+	}
+}
+// ADDED 2012-08-20 for the purpose of loading a random image for the staff interviews
+// Images are hardcoded but will revisit in order to make more dynamic
+function loadRandomImgSrc(imgID) {
+	var imgs=new Array();
+	imgs[0]='/outreach/interview/vid/Dr_Atlas.jpg';
+	imgs[1]='/outreach/interview/vid/Alan_Leonardi.jpg';
+	imgs[2]='/outreach/interview/vid/Joe_Bishop.jpg';
+	imgs[3]='/outreach/interview/vid/Gail_Derr.jpg';
+	imgs[4]='/outreach/interview/vid/Mayra_Pazos.jpg';
+	imgs[5]='/outreach/interview/vid/Chris_Kelble.jpg';
+	imgs[6]='/outreach/interview/vid/Paul_Reasor.jpg';
+	imgs[7]='/outreach/interview/vid/Lisa_Bucci.jpg';
+	imgs[8]='/outreach/interview/vid/Andy_Stefanick.jpg';
+	var imgnum=Math.floor((Math.random()*8)+1);
+	document.getElementById(imgID).src=imgs[imgnum];
+}
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_jumpMenuGo(selName,targ,restore){ //v3.0
+  var selObj = MM_findObj(selName); if (selObj) MM_jumpMenu(targ,selObj,restore);
+}
+
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+function openImageWindow(linkElement) {
+	var imgWindow = window.open("", "", "width=500, height=500");
+	imgWindow.document.write("<center><img src='"+linkElement.href+"'></center><p>"+linkElement.getElementsByTagName("img")[0].alt+"</p>");
+	var newWindowImg = imgWindow.document.getElementsByTagName("img")[0];
+	if(newWindowImg.width>newWindowImg.height) {
+		newWindowImg.style.width = '98%';
+	}
+	else {
+		newWindowImg.style.height = '81%';
+	}
+}
+function playpause() {
+  if(window.paused) {
+    window.newstimer=self.setInterval("autoswap()",7000);
+    window.paused=false;
+    (document.getElementById('playpause')).innerHTML = '<img width="15" src="/images/pause.gif" alt="play/pause" />';
+  }
+  else {
+    window.newstimer=window.clearInterval(window.newstimer);
+    window.paused=true;
+    (document.getElementById('playpause')).innerHTML = '<img width="15" src="/images/play.gif" alt="play/pause" />';
+  }
+}
+function playpause_hrd() {
+  if(window.paused) {
+    window.newstimer=self.setInterval("autoswap_hrd()",7000);
+    window.paused=false;
+    (document.getElementById('playpause')).innerHTML = '<img width="15" src="/images/pause.gif" alt="play/pause" />';
+  }
+  else {
+    window.newstimer=window.clearInterval(window.newstimer);
+    window.paused=true;
+    (document.getElementById('playpause')).innerHTML = '<img width="15" src="/images/play.gif" alt="play/pause" />';
+  }
+}
+function printerfriendly() {
+	var printcontent=document.getElementById('tdcontent').innerHTML;
+	if(document.URL.indexOf("print=yes")>0) {
+		document.body.style.backgroundImage='none';
+		document.body.style.background='none';
+		document.getElementById('mybody').innerHTML=printcontent;
+		document.getElementById('printfriendly').style.display="none";
+	}
+}
+function setImageWindow() {
+	var linkElements = document.getElementsByTagName("a");
+	for (i = 0; i < linkElements.length; i++) {
+		if(linkElements[i].href.indexOf("/pix/Keynotes")>0) {
+			linkElements[i].onclick=function(){openImageWindow(this);return false;};
+		}
+	}//end for 
+}
+function toggleNewsItems(id) {
+	window.newstimer=window.clearInterval(window.newstimer);
+	if(!window.paused)
+		window.newstimer=self.setInterval("autoswap()",7000);
+	document.getElementById('div0').style.display = "none";
+	var ele = document.getElementById(id);
+	var text = document.getElementById(id+"_text");
+	ele.style.display = "block";
+	text.innerHTML = "<b>"+id.substring(3,4)+"</b>";
+	for(var i=1;i<=5;i++) {
+		if(id=='div'+i)
+			continue;
+		else {
+			ele = document.getElementById('div'+i);
+			text = document.getElementById('div'+i+'_text');
+	    		ele.style.display = "none";
+			text.innerHTML = i;
+		}//end if
+	inc=parseInt(id.substring(3,4));
+	}//end for
+}//end toggleNewsItems
+
+function toggleNewsItems_hrd(id) {
+	window.newstimer=window.clearInterval(window.newstimer);
+	if(!window.paused)
+		window.newstimer=self.setInterval("autoswap_hrd()",7000);
+	var ele = document.getElementById(id);
+	var text = document.getElementById(id+"_text");
+	ele.style.display = "block";
+	text.innerHTML = "<b>"+id.substring(3,4)+"</b>";
+	for(var i=1;i<=5;i++) {
+		if(id=='div'+i)
+			continue;
+		else {
+			ele = document.getElementById('div'+i);
+			text = document.getElementById('div'+i+'_text');
+	    		ele.style.display = "none";
+			text.innerHTML = i;
+		}//end if
+	inc=parseInt(id.substring(3,4));
+	}//end for
+}//end toggleNewsItems
+
+function yearListToggle() {
+	var allElements = getElementsByName_iefix("div","year");
+	for (i = 0; i < allElements.length; i++) {
+		if(document.getElementById('yearselect').value==allElements[i].id) {
+			allElements[i].style.display = "block";
+		}
+		else
+			allElements[i].style.display = "none";
+	}
+}//end yearListToggle
+

@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : SeunghyukBookstoreValidate.war">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="archive" name="SeunghyukBookstoreValidate.war">
+      <element id="artifact" artifact-name="Gradle : SeunghyukBookstoreValidate.war (exploded)" />
+    </root>
+  </artifact>
+</component>

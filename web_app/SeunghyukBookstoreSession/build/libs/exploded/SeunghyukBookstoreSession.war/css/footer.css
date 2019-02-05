@@ -1,0 +1,24 @@
+footer {
+    padding-top: 80px;
+
+    color: black;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+.leftFooter {
+    margin-right: 20px;
+    justify-content: space-between;
+
+}
+.midFooter {
+    display: flex;
+}
+
+.rightFooter {
+    margin-left: 20px;
+    display:flex;
+    width: 200px;
+}

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.tomcat:tomcat-util-scan:8.5.15">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-util-scan/8.5.15/447f6efa1230d3653f34519c5e4a72e7eba1d53/tomcat-util-scan-8.5.15.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-util-scan/8.5.15/ba1109c236a3793d2d232d4e8ed4cf27a71eceb8/tomcat-util-scan-8.5.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
